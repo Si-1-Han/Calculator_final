@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnP, btnM, btnX, btnD, btnR, btnC;
+    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnP, btnM, btnX, btnD, btnR, btnC, btnDot, btnPercent, btnCE, btnDEL;
     private int a;
     private EditText edit;
     private int where = 0;
@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         btnD = (Button)findViewById(R.id.btnD);
         btnR = (Button)findViewById(R.id.btnR);
         btnC = (Button)findViewById(R.id.btnC);
+        btnDot = (Button)findViewById(R.id.btnDot);
+        btnPercent = (Button)findViewById(R.id.btnPercent);
+        btnCE = (Button)findViewById(R.id.btnCE);
+        btnDEL = (Button)findViewById(R.id.btnDEL);
+
+
 
         edit = (EditText)findViewById(R.id.edit1);
 
@@ -132,5 +138,10 @@ public class MainActivity extends AppCompatActivity {
         btnD.setOnClickListener(cl);
         btnR.setOnClickListener(cl);
         btnC.setOnClickListener(cl);
+        btnCE.setOnClickListener(cl);
+        btnDEL.setOnClickListener(cl);
+        btnPercent.setOnClickListener(cl);
+        btnDot.setOnClickListener(cl);
+
     }
 }
