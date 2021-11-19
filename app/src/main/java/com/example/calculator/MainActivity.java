@@ -74,44 +74,84 @@ public class MainActivity extends AppCompatActivity {
                     edit.setText(edit.getText().toString()+0);
                 }
                 else if(v==btnP) {
-                    a=Integer.valueOf(edit.getText().toString().trim());
-                    edit.setText("");
-                    where = 1;
+                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+
+                    }
+                    else {
+                        a = Integer.valueOf(edit.getText().toString().trim());
+                        edit.setText("");
+                        where = 1;
+                    }
                 }
                 else if(v==btnX) {
-                    a=Integer.valueOf(edit.getText().toString().trim());
-                    edit.setText("");
-                    where = 2;
+                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+
+                    }
+                    else {
+                        a = Integer.valueOf(edit.getText().toString().trim());
+                        edit.setText("");
+                        where = 2;
+                    }
                 }
                 else if(v==btnD) {
-                    a=Integer.valueOf(edit.getText().toString().trim());
-                    edit.setText("");
-                    where = 3;
+                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+
+                    }
+                    else {
+                        a = Integer.valueOf(edit.getText().toString().trim());
+                        edit.setText("");
+                        where = 3;
+                    }
                 }
                 else if(v==btnM) {
-                    a=Integer.valueOf(edit.getText().toString().trim());
-                    edit.setText("");
-                    where = 4;
+                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+
+                    }
+                    else {
+                        a = Integer.valueOf(edit.getText().toString().trim());
+                        edit.setText("");
+                        where = 4;
+                    }
                 }
                 else if(v==btnC) {
                     edit.setText("");
                 }
                 else if(v==btnR) {
                     if (where == 1) {
-                        a= a+Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText(Integer.toString(a));
+                        if(edit.getText().toString() == "") {
+
+                        }
+                        else {
+                            a = a + Integer.valueOf(edit.getText().toString().trim());
+                            edit.setText(Integer.toString(a));
+                        }
                     }
                     else if (where == 2) {
-                        a= a*Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText(Integer.toString(a));
+                        if(edit.getText().toString() == "") {
+
+                        }
+                        else {
+                            a = a * Integer.valueOf(edit.getText().toString().trim());
+                            edit.setText(Integer.toString(a));
+                        }
                     }
                     else if (where == 3) {
-                        a= a/Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText(Integer.toString(a));
+                        if(edit.getText().toString() == "") {
+
+                        }
+                        else {
+                            a = a / Integer.valueOf(edit.getText().toString().trim());
+                            edit.setText(Integer.toString(a));
+                        }
                     }
                     else if (where == 4) {
-                        a= a-Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText(Integer.toString(a));
+                        if(edit.getText().toString() == "") {
+
+                        }
+                        else {
+                            a = a + Integer.valueOf(edit.getText().toString().trim());
+                            edit.setText(Integer.toString(a));
+                        }
                     }
                 }
             }
