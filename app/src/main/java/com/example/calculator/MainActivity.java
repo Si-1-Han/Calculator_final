@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btnP, btnM, btnX, btnD, btnR, btnC, btnDel, btnCE, btnPercent,
             btnPM, btnDot;
     private int a;
-    private EditText edit;
+    private EditText edit1;
+    private TextView text1;
     private int where = 0;
 
     @Override
@@ -45,120 +47,130 @@ public class MainActivity extends AppCompatActivity {
         btnDot = (Button)findViewById(R.id.btnDot);
 
 
-        edit = (EditText)findViewById(R.id.edit1);
+        edit1 = (EditText)findViewById(R.id.edit1);
+        text1 = (TextView) findViewById(R.id.text1);
 
         View.OnClickListener cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(v==btn1) {
-                    edit.setText(edit.getText().toString()+1);
+                    edit1.setText(edit1.getText().toString()+1);
                 }
                 else if(v==btn2) {
-                    edit.setText(edit.getText().toString()+2);
+                    edit1.setText(edit1.getText().toString()+2);
                 }
                 else if(v==btn3) {
-                    edit.setText(edit.getText().toString()+3);
+                    edit1.setText(edit1.getText().toString()+3);
                 }
                 else if(v==btn4) {
-                    edit.setText(edit.getText().toString()+4);
+                    edit1.setText(edit1.getText().toString()+4);
                 }
                 else if(v==btn5) {
-                    edit.setText(edit.getText().toString()+5);
+                    edit1.setText(edit1.getText().toString()+5);
                 }
                 else if(v==btn6) {
-                    edit.setText(edit.getText().toString()+6);
+                    edit1.setText(edit1.getText().toString()+6);
                 }
                 else if(v==btn7) {
-                    edit.setText(edit.getText().toString()+7);
+                    edit1.setText(edit1.getText().toString()+7);
                 }
                 else if(v==btn8) {
-                    edit.setText(edit.getText().toString()+8);
+                    edit1.setText(edit1.getText().toString()+8);
                 }
                 else if(v==btn9) {
-                    edit.setText(edit.getText().toString()+9);
+                    edit1.setText(edit1.getText().toString()+9);
                 }
                 else if(v==btn0) {
-                    edit.setText(edit.getText().toString()+0);
+                    edit1.setText(edit1.getText().toString()+0);
                 }
                 else if(v==btnP) {
-                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+                    if(edit1.getText().toString().equals("") || edit1.getText().toString().equals(null)) {
 
                     }
                     else {
-                        a = Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText("");
+                        a = Integer.valueOf(edit1.getText().toString().trim());
+                        text1.setText(edit1.getText().toString() + "+");
+                        edit1.setText("");
                         where = 1;
                     }
                 }
                 else if(v==btnX) {
-                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+                    if(edit1.getText().toString().equals("") || edit1.getText().toString().equals(null)) {
 
                     }
                     else {
-                        a = Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText("");
+                        a = Integer.valueOf(edit1.getText().toString().trim());
+                        edit1.setText("");
                         where = 2;
                     }
                 }
                 else if(v==btnD) {
-                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+                    if(edit1.getText().toString().equals("") || edit1.getText().toString().equals(null)) {
 
                     }
                     else {
-                        a = Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText("");
+                        a = Integer.valueOf(edit1.getText().toString().trim());
+                        edit1.setText("");
                         where = 3;
                     }
                 }
                 else if(v==btnM) {
-                    if(edit.getText().toString().equals("") || edit.getText().toString().equals(null)) {
+                    if(edit1.getText().toString().equals("") || edit1.getText().toString().equals(null)) {
 
                     }
                     else {
-                        a = Integer.valueOf(edit.getText().toString().trim());
-                        edit.setText("");
+                        a = Integer.valueOf(edit1.getText().toString().trim());
+                        edit1.setText("");
                         where = 4;
                     }
                 }
                 else if(v==btnC) {
-                    edit.setText("");
+                    edit1.setText("");
                 }
                 else if(v==btnR) {
                     if (where == 1) {
-                        if(edit.getText().toString() == "") {
+                        if(edit1.getText().toString().equals("")) {
 
                         }
                         else {
-                            a = a + Integer.valueOf(edit.getText().toString().trim());
-                            edit.setText(Integer.toString(a));
+                            a = a + Integer.valueOf(edit1.getText().toString().trim());
+                            edit1.setText(Integer.toString(a));
                         }
                     }
                     else if (where == 2) {
-                        if(edit.getText().toString() == "") {
+                        if(edit1.getText().toString().equals("")) {
 
                         }
                         else {
-                            a = a * Integer.valueOf(edit.getText().toString().trim());
-                            edit.setText(Integer.toString(a));
+                            a = a * Integer.valueOf(edit1.getText().toString().trim());
+                            edit1.setText(Integer.toString(a));
                         }
                     }
                     else if (where == 3) {
-                        if(edit.getText().toString() == "") {
+                        if(edit1.getText().toString().equals("")) {
 
                         }
                         else {
-                            a = a / Integer.valueOf(edit.getText().toString().trim());
-                            edit.setText(Integer.toString(a));
+                            a = a / Integer.valueOf(edit1.getText().toString().trim());
+                            edit1.setText(Integer.toString(a));
                         }
                     }
                     else if (where == 4) {
-                        if(edit.getText().toString() == "") {
+                        if(edit1.getText().toString().equals("")) {
 
                         }
                         else {
-                            a = a + Integer.valueOf(edit.getText().toString().trim());
-                            edit.setText(Integer.toString(a));
+                            a = a + Integer.valueOf(edit1.getText().toString().trim());
+                            edit1.setText(Integer.toString(a));
                         }
+                    }
+                }
+                else if(v==btnDel) {
+                    if(edit1.getText().toString().equals("")) {
+
+                    } else {
+                        String TempStr = edit1.getText().toString();
+                        edit1.setText(TempStr.substring(0, TempStr.length() - 1));
                     }
                 }
             }
@@ -182,6 +194,6 @@ public class MainActivity extends AppCompatActivity {
         btnPercent.setOnClickListener(cl);
         btnDel.setOnClickListener(cl);
         btnPM.setOnClickListener(cl);
-        
+
     }
 }
